@@ -1,0 +1,33 @@
+﻿@{
+    var msg = ViewBag.Message;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+<div>
+    <ul>
+        <li>
+            <a href="~/">~/</a>
+        </li>
+        <li>
+            <a href="~/Root/Home/Append">~/Razor/Home/Append</a>
+        </li>
+        <li>
+            <a href="~/Razor/Home.Index">~/Razor/Home.Index</a>
+        </li>
+        <li>
+            <a href="~/Razor/Home.Index2">~/Razor/Home.Index2</a>
+        </li>
+    </ul>
+    <hr/>
+    @RenderBody()
+    <hr/>
+    <p>@msg</p>
+</div>
+</body>
+</html>

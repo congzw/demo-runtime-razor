@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<RootNamespace>DemoOrchardWeb</RootNamespace>
+		<UserSecretsId>da68dcf9-1f5d-408e-a3da-32fa9bc280ea</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.18" />
+		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="1.0.0-rc2-13450" />
+	</ItemGroup>
+
+	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
+		<ItemGroup>
+			<Views Include="Views\**" />
+		</ItemGroup>
+		<Copy SourceFiles="@(Views)" DestinationFolder="$(PublishDir)%(Views.RelativeDir)" />
+	</Target>
+
+</Project>

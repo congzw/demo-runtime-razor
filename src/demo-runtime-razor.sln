@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{86A3091E-048
 		..\readme.md = ..\readme.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoOrchardWeb", "DemoOrchardWeb\DemoOrchardWeb.csproj", "{D2EBC976-C53C-4BAC-B407-4E124A97AB95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{CEC68265-755C-4514-ADAA-99F978EE2270}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEC68265-755C-4514-ADAA-99F978EE2270}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEC68265-755C-4514-ADAA-99F978EE2270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2EBC976-C53C-4BAC-B407-4E124A97AB95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2EBC976-C53C-4BAC-B407-4E124A97AB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2EBC976-C53C-4BAC-B407-4E124A97AB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2EBC976-C53C-4BAC-B407-4E124A97AB95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
