@@ -8,12 +8,15 @@ namespace DemoOrchardWeb
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOrchardCore()
-                .AddMvc();
-            
             services.Configure<IMvcBuilder>(o =>
             {
                 o.AddRazorRuntimeCompilation();
+            });
+
+            services.AddOrchardCore(orchard =>
+            {
+                //orchard.AddBackgroundService();
+                orchard.AddMvc();
             });
         }
 
