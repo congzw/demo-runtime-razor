@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>3ad01793-92fb-4d61-a095-44f96bed9604</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.9" />
+	</ItemGroup>
+
+	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
+		<ItemGroup>
+			<Views Include="Views\**" />
+		</ItemGroup>
+		<Copy SourceFiles="@(Views)" DestinationFolder="$(PublishDir)%(Views.RelativeDir)" />
+	</Target>
+</Project>
