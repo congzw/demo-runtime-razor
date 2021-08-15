@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DemoOrchardWeb.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : MvcController
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IHostEnvironment _hostEnvironment;
@@ -18,11 +18,13 @@ namespace DemoOrchardWeb.Controllers
             _hostEnvironment = hostEnvironment;
         }
 
+        [Route("/")]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Route("/Root/Home/Append")]
         public IActionResult Append()
         {
             //a demo for dynamic edit razor page

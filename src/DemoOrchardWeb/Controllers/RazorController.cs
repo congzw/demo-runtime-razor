@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace DemoOrchardWeb.Controllers
 {
-    public class RazorController : Controller
+    public class RazorController : MvcController
     {
         private readonly ILogger<RazorController> _logger;
 
@@ -12,6 +12,7 @@ namespace DemoOrchardWeb.Controllers
             _logger = logger;
         }
 
+        [Route("/Razor/{view}")]
         public IActionResult Render(string view)
         {
             if (string.IsNullOrWhiteSpace(view))
