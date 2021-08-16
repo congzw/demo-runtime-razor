@@ -23,6 +23,7 @@ namespace DemoOrchardWeb
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseDeveloperExceptionPage();
+            app.UseStaticFiles();
             app.UseOrchardCore();
         }
     }

@@ -11,6 +11,13 @@
 		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="1.0.0-rc2-13450" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Content Update="wwwroot\app\index.html">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
 		<ItemGroup>
 			<Views Include="Views\**" />
