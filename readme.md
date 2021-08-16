@@ -16,6 +16,11 @@
 <PreserveCompilationReferences>true</PreserveCompilationReferences>
 <PreserveCompilationContext>true</PreserveCompilationContext>
 
+## 指定不编译视图 
+
+<RazorCompileOnBuild>false</RazorCompileOnBuild>
+<RazorCompileOnPublish>false</RazorCompileOnPublish>
+
 ## demo steps:
 
 - 1 release and deploy 

@@ -3,19 +3,14 @@
 	<PropertyGroup>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<RootNamespace>DemoOrchardWeb</RootNamespace>
+		<RazorCompileOnBuild>false</RazorCompileOnBuild>
+		<RazorCompileOnPublish>false</RazorCompileOnPublish>
 		<UserSecretsId>da68dcf9-1f5d-408e-a3da-32fa9bc280ea</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.18" />
 		<PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="1.0.0-rc2-13450" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Update="wwwroot\app\index.html">
-	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-	  </Content>
 	</ItemGroup>
 
 	<Target Name="CopyCustomContentOnPublish" AfterTargets="Publish">
